@@ -1,0 +1,10 @@
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.deps.json
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.runtimeconfig.json
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.runtimeconfig.dev.json
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.dll
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.pdb
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.csproj.CoreCompileInputs.cache
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.AssemblyInfoInputs.cache
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.AssemblyInfo.cs
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.dll
+/Users/jialangzhang/Desktop/Projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.pdb
