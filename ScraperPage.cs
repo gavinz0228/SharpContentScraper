@@ -1,6 +1,8 @@
 using CsQuery;
 using System;
 using System.Collections.Generic;
+using SharpContentScraper.Utilities;
+using System.Linq;
 namespace SharpContentScraper
 {
     public class ScraperPage{
@@ -17,6 +19,16 @@ namespace SharpContentScraper
             foreach(var e in result.Elements)
                 elements.Add(new ScraperElement(e));
             return elements;
+        }
+        public T MapToObject<T>(Mapper mapper){
+            T obj = (T)Activator.CreateInstance(typeof(T));
+            CQ dom = this.Html;
+            var mappings = mapper.mappings;
+            foreach(var propName in mappings.Keys)
+            {
+                CQ result = dom[mappings[propName].HtmlSelector];
+                //ReflectionUtil.AssignProperty(obj, propName, result.Elements.FirstOrDefault());
+            }
         }
         public ScraperUrl Url{get;set;}
         public string Html {get;set;}
