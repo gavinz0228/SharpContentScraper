@@ -1,7 +1,6 @@
 using CsQuery;
 using System;
 using System.Collections.Generic;
-using SharpContentScraper.Utilities;
 using System.Linq;
 namespace SharpContentScraper
 {
@@ -26,9 +25,25 @@ namespace SharpContentScraper
             var mappings = mapper.mappings;
             foreach(var propName in mappings.Keys)
             {
-                CQ result = dom[mappings[propName].HtmlSelector];
-                //ReflectionUtil.AssignProperty(obj, propName, result.Elements.FirstOrDefault());
+                var valueInfo = mappings[propName];
+                var propType = ReflectionUtil.GetPropertyType(typeof(T), propName);
+                if(string.IsNullOrEmpty(valueInfo.HtmlSelector))
+                {
+                    if(valueInfo.Type == ValueType.Text)
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(dom.Text(), propType) );
+                    else 
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType( dom.Attr(valueInfo.AttributeName), propType));
+                }
+                else
+                {
+                    CQ result = dom[valueInfo.HtmlSelector];
+                    if(valueInfo.Type == ValueType.Text)
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Text(), propType));
+                    else 
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Attr(valueInfo.AttributeName),propType));
+                }
             }
+            return obj;
         }
         public ScraperUrl Url{get;set;}
         public string Html {get;set;}
