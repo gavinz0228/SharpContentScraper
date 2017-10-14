@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Collections.Generic;
+using CsQuery;
 namespace SharpContentScraper
 {
     public enum ValueType{Text, Attribute};
@@ -26,6 +27,33 @@ namespace SharpContentScraper
             else
                 mappings.Add(propertyName, new ValueMapping(){HtmlSelector = htmlSelector, AttributeName = null, Type = ValueType.Text});
             return this;
+        }
+        public T MapToObject<T>(Mapper mapper, string html){
+            T obj = (T)Activator.CreateInstance(typeof(T));
+            CQ dom = html;
+            CQ a= html;
+            var mappings = mapper.mappings;
+            foreach(var propName in mappings.Keys)
+            {
+                var valueInfo = mappings[propName];
+                var propType = ReflectionUtil.GetPropertyType(typeof(T), propName);
+                if(string.IsNullOrEmpty(valueInfo.HtmlSelector))
+                {
+                    if(valueInfo.Type == ValueType.Text)
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(dom.Text(), propType) );
+                    else 
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType( dom.Attr(valueInfo.AttributeName), propType));
+                }
+                else
+                {
+                    CQ result = dom[valueInfo.HtmlSelector];
+                    if(valueInfo.Type == ValueType.Text)
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Text(), propType));
+                    else 
+                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Attr(valueInfo.AttributeName),propType));
+                }
+            }
+            return obj;
         }
 
     }

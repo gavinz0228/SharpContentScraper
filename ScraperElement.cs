@@ -13,9 +13,13 @@ namespace SharpContentScraper
         public string GetAttr(string attrName) => this.Element.GetAttribute(attrName);
         public IEnumerable<string> GetClasses() => this.Element.Classes;
 
+        public string GetHtml() => this.Element.Render();
         public string GetText() => this.Element.InnerText;
         public string GetName() => this.Element.Name;
-
+        public T MapToObject<T>(Mapper mapper){
+            System.Console.WriteLine(GetHtml());
+            return mapper.MapToObject<T>(mapper, GetHtml());
+        }
 
     }
 }

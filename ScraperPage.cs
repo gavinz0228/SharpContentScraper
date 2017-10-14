@@ -20,30 +20,7 @@ namespace SharpContentScraper
             return elements;
         }
         public T MapToObject<T>(Mapper mapper){
-            T obj = (T)Activator.CreateInstance(typeof(T));
-            CQ dom = this.Html;
-            var mappings = mapper.mappings;
-            foreach(var propName in mappings.Keys)
-            {
-                var valueInfo = mappings[propName];
-                var propType = ReflectionUtil.GetPropertyType(typeof(T), propName);
-                if(string.IsNullOrEmpty(valueInfo.HtmlSelector))
-                {
-                    if(valueInfo.Type == ValueType.Text)
-                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(dom.Text(), propType) );
-                    else 
-                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType( dom.Attr(valueInfo.AttributeName), propType));
-                }
-                else
-                {
-                    CQ result = dom[valueInfo.HtmlSelector];
-                    if(valueInfo.Type == ValueType.Text)
-                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Text(), propType));
-                    else 
-                        ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Attr(valueInfo.AttributeName),propType));
-                }
-            }
-            return obj;
+            return mapper.MapToObject<T>(mapper, this.Html);
         }
         public ScraperUrl Url{get;set;}
         public string Html {get;set;}
