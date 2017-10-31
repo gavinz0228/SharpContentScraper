@@ -4,7 +4,7 @@ This is a web scarper library written in C#. This is a scarping tool to enable C
 Example:
 
 testing123.com
-
+```html
 <html>
 <head>
 <title>example </title>
@@ -28,16 +28,17 @@ testing123.com
 </body>
 </head>
 </html>
-
+```
 
 You can define a C# model like this:
-
+```C#
 public class Article{
   public string Title {get;set;}
   public string Url {get;set;}
   public string Content {get;set;}
   public DateTime CreationTime {get;set;}
 }
+```
 
 The C# code to map the html code to a collection of Article objects will be like this:
 
