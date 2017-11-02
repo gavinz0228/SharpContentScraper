@@ -1,0 +1,12 @@
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.csproj.CoreCompileInputs.cache
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.AssemblyInfoInputs.cache
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.AssemblyInfo.cs
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/ScraperExamples.deps.json
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/ScraperExamples.runtimeconfig.json
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/ScraperExamples.runtimeconfig.dev.json
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/ScraperExamples.dll
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/ScraperExamples.pdb
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/SharpContentScraper.dll
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/SharpContentScraper.pdb
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.dll
+/home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.pdb

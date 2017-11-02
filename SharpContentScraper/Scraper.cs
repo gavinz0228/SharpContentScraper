@@ -15,5 +15,13 @@ namespace SharpContentScraper
             var html = httpResponse.Result.Content.ReadAsStringAsync().Result;
             return new ScraperPage(url, html);
         }
+        public async static Task<ScraperPage> GetAsync(string url)
+        {
+            HttpClient httpClient =new HttpClient();
+            var httpResponse = httpClient.GetAsync(url);
+            var resp = await httpResponse;
+            var html = await resp.Content.ReadAsStringAsync();
+            return new ScraperPage(url, html);
+        }
     }
 }

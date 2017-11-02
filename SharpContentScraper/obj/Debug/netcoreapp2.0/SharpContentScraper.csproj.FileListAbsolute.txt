@@ -1,0 +1,8 @@
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.csproj.CoreCompileInputs.cache
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.AssemblyInfoInputs.cache
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.AssemblyInfo.cs
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.deps.json
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.dll
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.pdb
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.dll
+/home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.pdb
