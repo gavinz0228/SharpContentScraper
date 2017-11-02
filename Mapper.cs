@@ -28,6 +28,12 @@ namespace SharpContentScraper
                 mappings.Add(propertyName, new ValueMapping(){HtmlSelector = htmlSelector, AttributeName = null, Type = ValueType.Text});
             return this;
         }
+
+        public Dictionary<string, string> MapToDictionary(Mapper mapper, string html)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            return dict;
+        }
         public T MapToObject<T>(Mapper mapper, string html){
             T obj = (T)Activator.CreateInstance(typeof(T));
             CQ dom = html;
@@ -47,6 +53,7 @@ namespace SharpContentScraper
                 else
                 {
                     CQ result = dom[valueInfo.HtmlSelector];
+                    Console.Write(result);
                     if(valueInfo.Type == ValueType.Text)
                         ReflectionUtil.AssignProperty(obj, propName, ReflectionUtil.ConvertToType(result.Text(), propType));
                     else 

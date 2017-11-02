@@ -19,7 +19,7 @@ namespace SharpContentScraper
             Console.WriteLine("My Name:");
             Console.WriteLine(test.name);
             */
-            var test = Scraper.Get("http://higavin.com")
+            Test test = Scraper.Get("http://higavin.com")
                 .GetElements("#logo").First()
                 .MapToObject<Test>(
                     (new Mapper()).MapText("#logo", "name")
@@ -32,4 +32,5 @@ namespace SharpContentScraper
     public class Test{
         public string name{get;set;}
     }
+    
 }

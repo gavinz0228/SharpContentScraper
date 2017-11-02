@@ -1,5 +1,6 @@
 using CsQuery;
 using System.Collections.Generic;
+using System.Linq;
 namespace SharpContentScraper
 {
     public class ScraperElement
@@ -17,9 +18,15 @@ namespace SharpContentScraper
         public string GetText() => this.Element.InnerText;
         public string GetName() => this.Element.Name;
         public T MapToObject<T>(Mapper mapper){
-            System.Console.WriteLine(GetHtml());
+            //System.Console.WriteLine(GetHtml());
             return mapper.MapToObject<T>(mapper, GetHtml());
         }
-
+    }
+    public static class ScraperElementExtension
+    {
+        public static IEnumerable<T> MapToObjects<T>(this IEnumerable<ScraperElement> elements, Mapper mapper)
+        {
+            return elements.Select(e=> e.MapToObject<T>(mapper));
+        }
     }
 }
