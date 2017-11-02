@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{C4B5FF87-B9FB-4226-976B-72B5FA51388D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScraperExamples/Program.cs">
+    <Files>
+      <File FileName="ScraperExamples/Program.cs" Line="20" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SharpContentScraper PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.ScraperExamples PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
