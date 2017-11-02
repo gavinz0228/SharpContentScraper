@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using SharpContentScraper;
 using System.Threading.Tasks;
 namespace ScraperExamples
@@ -8,9 +9,9 @@ namespace ScraperExamples
     {
         static void Main(string[] args)
         {
-            ParseHuffingtonPostAsync().Wait();
-             
-
+            //ParseHuffingtonPost();
+            //ParseHuffingtonPostAsync().Wait();
+            ParseHuffingtonPosToDictionary();
         }
         static void ParseHuffingtonPost()
         {
@@ -27,6 +28,22 @@ namespace ScraperExamples
                 Console.WriteLine(n.Title + " " + n.Url);
                 
             }
+        }
+        static void ParseHuffingtonPosToDictionary()
+        {
+                var news =  Scraper.Get("https://www.huffingtonpost.com")
+               .GetElements(".bn-card")
+               .MapToDictionary(
+                   (new Mapper())
+                    .MapAttr(".bn-card-headline","href","Url")
+                    .MapText(".bn-card-headline", "Title")
+                              );
+                foreach(Dictionary<string,string> n in news)
+                {
+                    foreach(var k in n.Keys)
+                        Console.WriteLine(k);
+                }
+            
         }
         static async Task ParseHuffingtonPostAsync()
         {

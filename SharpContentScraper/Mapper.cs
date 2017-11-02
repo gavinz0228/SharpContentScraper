@@ -32,12 +32,33 @@ namespace SharpContentScraper
         public Dictionary<string, string> MapToDictionary(Mapper mapper, string html)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
+            CQ dom = html;
+            var mappings = mapper.mappings;
+            foreach(var propName in mappings.Keys)
+            {
+                var valueInfo = mappings[propName];
+                if(string.IsNullOrEmpty(valueInfo.HtmlSelector))
+                {
+                    if(valueInfo.Type == ValueType.Text)
+                        dict.Add( propName, dom.Text() );
+                    else 
+                        dict.Add(propName, dom.Attr(valueInfo.AttributeName));
+                }
+                else
+                {
+                    CQ result = dom[valueInfo.HtmlSelector];
+                    Console.Write(result);
+                    if(valueInfo.Type == ValueType.Text)
+                        dict.Add( propName, result.Text() );
+                    else 
+                        dict.Add( propName, result.Attr(valueInfo.AttributeName) );
+                }
+            }
             return dict;
         }
         public T MapToObject<T>(Mapper mapper, string html){
             T obj = (T)Activator.CreateInstance(typeof(T));
             CQ dom = html;
-            CQ a= html;
             var mappings = mapper.mappings;
             foreach(var propName in mappings.Keys)
             {

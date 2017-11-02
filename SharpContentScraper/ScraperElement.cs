@@ -21,6 +21,10 @@ namespace SharpContentScraper
             //System.Console.WriteLine(GetHtml());
             return mapper.MapToObject<T>(mapper, GetHtml());
         }
+        public Dictionary<string,string> MapToDictionary(Mapper mapper)
+        {
+            return mapper.MapToDictionary(mapper,GetHtml());
+        }
     }
     public static class ScraperElementExtension
     {
@@ -28,5 +32,10 @@ namespace SharpContentScraper
         {
             return elements.Select(e=> e.MapToObject<T>(mapper));
         }
+        public static IEnumerable<Dictionary<string,string>> MapToDictionary(this IEnumerable<ScraperElement> elements, Mapper mapper)
+        {
+            return elements.Select(e=> e.MapToDictionary(mapper));
+        }
     }
+    
 }
