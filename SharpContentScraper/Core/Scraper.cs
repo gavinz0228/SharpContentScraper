@@ -1,27 +1,32 @@
 using System;
 using System.Threading.Tasks;
 using System.Net.Http;
+using SharpContentScraper.Html;
 namespace SharpContentScraper
 {
     public class Scraper{
-        public static ScraperPage Get(string url)
+        public static IHtmlSelector Get(string url)
         {
             HttpClient client =new HttpClient();
             return Get(url, client);
         }
-        public static ScraperPage Get(string url, HttpClient httpClient)
+        public static IHtmlSelector Get(string url, HttpClient httpClient)
         {
             var httpResponse = httpClient.GetAsync(url);
             var html = httpResponse.Result.Content.ReadAsStringAsync().Result;
-            return new ScraperPage(url, html);
+            IHtmlSelector htmlSelector = HtmlSelectorFactory.GetDefaultHtmlSelector();
+            htmlSelector.LoadHtml(html);
+            return htmlSelector;
         }
-        public async static Task<ScraperPage> GetAsync(string url)
+        public async static Task<IHtmlSelector> GetAsync(string url)
         {
             HttpClient httpClient =new HttpClient();
             var httpResponse = httpClient.GetAsync(url);
             var resp = await httpResponse;
             var html = await resp.Content.ReadAsStringAsync();
-            return new ScraperPage(url, html);
+            IHtmlSelector htmlSelector = HtmlSelectorFactory.GetDefaultHtmlSelector();
+            htmlSelector.LoadHtml(html);
+            return htmlSelector;
         }
     }
 }

@@ -43,7 +43,7 @@ public class Article{
 The C# code to map the html code to a collection of Article objects will be like this:
 
       Ienumerable<Article> articles = Scraper.Get("http://testing123.com")
-          .GetElements("article")
+          .GetChildren("article")
           .MapToObject<Article>(
               (new Mapper())
                 .MapText("a", "Title")

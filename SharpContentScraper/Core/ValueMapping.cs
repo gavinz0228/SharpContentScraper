@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Collections.Generic;
-namespace SharpContentScraper{
+namespace SharpContentScraper.Core{
     public class ValueMapping
     {
         public string HtmlSelector{get; set;}

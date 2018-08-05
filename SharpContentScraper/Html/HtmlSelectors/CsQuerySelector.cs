@@ -14,18 +14,6 @@ namespace SharpContentScraper.Html.HtmlSelectors
             this.html = html;
             dom = html;
         }
-        public IEnumerable<ScraperElement> SelectElements(string query)
-        {
-            CQ ele = dom[query];
-            if(ele == null)
-                yield break;
-            foreach(var e in ele)
-            {
-                CsQuerySelector htmlaSelector = new CsQuerySelector();
-                htmlaSelector.LoadHtml(e.Render());
-                yield return  new ScraperElement(htmlaSelector);
-            }
-        }
         public IEnumerable<IHtmlSelector> GetChildren(string query)
         {
             CQ ele = dom[query];

@@ -3,6 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 using SharpContentScraper;
 using System.Threading.Tasks;
+using SharpContentScraper.Html;
+using SharpContentScraper.Core;
 namespace ScraperExamples
 {
     class Program
@@ -16,7 +18,7 @@ namespace ScraperExamples
         static void ParseHuffingtonPost()
         {
             var news =  Scraper.Get("https://www.huffingtonpost.com")
-               .GetElements(".card")
+               .GetChildren(".card")
                    .MapToObjects<News>(
                         (new Mapper())
                     .MapAttr(".card__link","href","Url")
@@ -32,7 +34,7 @@ namespace ScraperExamples
         static void ParseHuffingtonPosToDictionary()
         {
                 var news =  Scraper.Get("https://www.huffingtonpost.com")
-               .GetElements(".card")
+               .GetChildren(".card")
                .MapToDictionary(
                    (new Mapper())
                     .MapAttr(".card__link","href","Url")
@@ -48,7 +50,7 @@ namespace ScraperExamples
         static async Task ParseHuffingtonPostAsync()
         {
             var news =( await Scraper.GetAsync("https://www.huffingtonpost.com"))
-                   .GetElements(".bn-card")
+                   .GetChildren(".bn-card")
                    .AsParallel()
                    .MapToObjects<News>(
                        (new Mapper())

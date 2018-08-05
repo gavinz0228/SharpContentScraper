@@ -1,12 +1,14 @@
 using System.Threading.Tasks;
-namespace SharpContentScraper{
+using SharpContentScraper.Html;
+namespace SharpContentScraper.Core
+{
     public class ScraperUrl{
         public ScraperUrl ( string url)
         {
             Value = url;
         }
         public string Value{get;set;}
-        public ScraperPage  Get(){
+        public  IHtmlSelector  Get(){
             return  Scraper.Get(this.Value);
         }
     }
