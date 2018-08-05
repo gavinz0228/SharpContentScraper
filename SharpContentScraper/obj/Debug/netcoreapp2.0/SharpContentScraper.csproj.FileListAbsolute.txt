@@ -6,3 +6,12 @@
 /home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/bin/Debug/netcoreapp2.0/SharpContentScraper.pdb
 /home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.dll
 /home/ubuntu/workspace/projects/SharpContentScraper/SharpContentScraper/obj/Debug/netcoreapp2.0/SharpContentScraper.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\bin\Debug\netcoreapp2.0\SharpContentScraper.deps.json
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\bin\Debug\netcoreapp2.0\SharpContentScraper.dll
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\bin\Debug\netcoreapp2.0\SharpContentScraper.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.csprojAssemblyReference.cache
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.csproj.CoreCompileInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.AssemblyInfoInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.AssemblyInfo.cs
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.dll
+C:\Users\Gavin\Projects\SharpContentScraper\SharpContentScraper\obj\Debug\netcoreapp2.0\SharpContentScraper.pdb

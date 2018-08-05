@@ -9,19 +9,19 @@ namespace ScraperExamples
     {
         static void Main(string[] args)
         {
-            //ParseHuffingtonPost();
+            ParseHuffingtonPost();
             //ParseHuffingtonPostAsync().Wait();
-            ParseHuffingtonPosToDictionary();
+            //ParseHuffingtonPosToDictionary();
         }
         static void ParseHuffingtonPost()
         {
             var news =  Scraper.Get("https://www.huffingtonpost.com")
-                   .GetElements(".bn-card")
+               .GetElements(".card")
                    .MapToObjects<News>(
-                       (new Mapper())
-                        .MapAttr(".bn-card-headline","href","Url")
-                        .MapText(".bn-card-headline", "Title")
-                                  ).ToList();
+                        (new Mapper())
+                    .MapAttr(".card__link","href","Url")
+                    .MapText(".card__link", "Title")
+                    ).ToList();
 
             foreach(var n in news)
             {
@@ -32,11 +32,11 @@ namespace ScraperExamples
         static void ParseHuffingtonPosToDictionary()
         {
                 var news =  Scraper.Get("https://www.huffingtonpost.com")
-               .GetElements(".bn-card")
+               .GetElements(".card")
                .MapToDictionary(
                    (new Mapper())
-                    .MapAttr(".bn-card-headline","href","Url")
-                    .MapText(".bn-card-headline", "Title")
+                    .MapAttr(".card__link","href","Url")
+                    .MapText(".card__link", "Title")
                               );
                 foreach(Dictionary<string,string> n in news)
                 {

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.ComponentModel;
 using System.Diagnostics;
-namespace SharpContentScraper{
+namespace SharpContentScraper.Utilities{
     public class ReflectionUtil
     {
-        static Dictionary<Type, Dictionary<string, PropertyInfo>> PropertyCache;
+        public static Dictionary<Type, Dictionary<string, PropertyInfo>> PropertyCache;
         static ReflectionUtil(){
 
             PropertyCache = new Dictionary<Type, Dictionary<string, PropertyInfo>> ();
         }
-        static PropertyInfo GetPropInfoFromCache(Type type, string propName )
+        public static PropertyInfo GetPropInfoFromCache(Type type, string propName )
         {
             if(!PropertyCache.ContainsKey(type)){
                 var classProp = new Dictionary<string,PropertyInfo>();

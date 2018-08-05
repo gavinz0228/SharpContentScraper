@@ -2,25 +2,26 @@ using CsQuery;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using SharpContentScraper.Html;
 namespace SharpContentScraper
 {
     public class ScraperPage{
+        public string html;
         public ScraperPage(string url, string html)
         {
             Url = new ScraperUrl( url);
-            Html =html;
+            this.html =html;
         }
         public IEnumerable< ScraperElement> GetElements(string query)
         {
-            List<ScraperElement> elements = new List<ScraperElement>();
-            CQ dom = this.Html;
-            CQ result = dom[query];
-            foreach(var e in result.Elements)
-                elements.Add(new ScraperElement(e));
-            return elements;
+            IHtmlSelector htmlSelector = HtmlSelectorFactory.GetDefaultHtmlSelector();
+            htmlSelector.LoadHtml(this.html);
+            return htmlSelector.SelectElements(query);
         }
         public T MapToObject<T>(Mapper mapper){
-            return mapper.MapToObject<T>(mapper, this.Html);
+            IHtmlSelector htmlSelector = HtmlSelectorFactory.GetDefaultHtmlSelector();
+            htmlSelector.LoadHtml(this.html);
+            return mapper.MapToObject<T>(mapper, htmlSelector);
         }
         public ScraperUrl Url{get;set;}
         public string Html {get;set;}

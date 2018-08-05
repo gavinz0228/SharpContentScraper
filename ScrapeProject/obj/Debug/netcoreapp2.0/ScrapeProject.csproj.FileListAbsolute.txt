@@ -1,0 +1,11 @@
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\bin\Debug\netcoreapp2.0\ScrapeProject.deps.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\bin\Debug\netcoreapp2.0\ScrapeProject.runtimeconfig.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\bin\Debug\netcoreapp2.0\ScrapeProject.runtimeconfig.dev.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\bin\Debug\netcoreapp2.0\ScrapeProject.dll
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\bin\Debug\netcoreapp2.0\ScrapeProject.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.csprojAssemblyReference.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.csproj.CoreCompileInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.AssemblyInfoInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.AssemblyInfo.cs
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.dll
+C:\Users\Gavin\Projects\SharpContentScraper\ScrapeProject\obj\Debug\netcoreapp2.0\ScrapeProject.pdb

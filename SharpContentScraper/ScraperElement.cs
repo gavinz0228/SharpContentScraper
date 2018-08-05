@@ -1,31 +1,29 @@
-using CsQuery;
 using System.Collections.Generic;
 using System.Linq;
+using SharpContentScraper.Html;
 namespace SharpContentScraper
 {
     public class ScraperElement
     {    
-        public IDomElement Element;
-        private ScraperElement(){}
-        internal ScraperElement(IDomElement ele)
+        public IHtmlSelector htmlSelector;
+        internal ScraperElement(IHtmlSelector htmlSelector)
         {
-            this.Element = ele;
+            this.htmlSelector = htmlSelector;
         }
-        public string GetAttr(string attrName) => this.Element.GetAttribute(attrName);
-        public IEnumerable<string> GetClasses() => this.Element.Classes;
+        public string GetAttr(string attrName) => this.htmlSelector.GetAttr(attrName);
+        public string GetHtml() => this.htmlSelector.GetHtml();
+        public string GetText() => this.htmlSelector.GetText();
 
-        public string GetHtml() => this.Element.Render();
-        public string GetText() => this.Element.InnerText;
-        public string GetName() => this.Element.Name;
-        public T MapToObject<T>(Mapper mapper){
-            //System.Console.WriteLine(GetHtml());
-            return mapper.MapToObject<T>(mapper, GetHtml());
+        public T MapToObject<T>(Mapper mapper)
+        {
+            return mapper.MapToObject<T>(mapper, this.htmlSelector);
         }
         public Dictionary<string,string> MapToDictionary(Mapper mapper)
         {
-            return mapper.MapToDictionary(mapper,GetHtml());
+            return mapper.MapToDictionary(mapper, this.htmlSelector);
         }
     }
+
     public static class ScraperElementExtension
     {
         public static IEnumerable<T> MapToObjects<T>(this IEnumerable<ScraperElement> elements, Mapper mapper)

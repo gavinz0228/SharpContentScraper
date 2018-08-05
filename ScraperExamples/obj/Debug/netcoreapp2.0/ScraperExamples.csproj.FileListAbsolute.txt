@@ -10,3 +10,17 @@
 /home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/bin/Debug/netcoreapp2.0/SharpContentScraper.pdb
 /home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.dll
 /home/ubuntu/workspace/projects/SharpContentScraper/ScraperExamples/obj/Debug/netcoreapp2.0/ScraperExamples.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\ScraperExamples.deps.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\ScraperExamples.runtimeconfig.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\ScraperExamples.runtimeconfig.dev.json
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\ScraperExamples.dll
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\ScraperExamples.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\SharpContentScraper.dll
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\bin\Debug\netcoreapp2.0\SharpContentScraper.pdb
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.csprojAssemblyReference.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.csproj.CoreCompileInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.AssemblyInfoInputs.cache
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.AssemblyInfo.cs
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.csproj.CopyComplete
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.dll
+C:\Users\Gavin\Projects\SharpContentScraper\ScraperExamples\obj\Debug\netcoreapp2.0\ScraperExamples.pdb
