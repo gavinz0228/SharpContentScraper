@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using System.Net.Http;
 using SharpContentScraper.Html;
-namespace SharpContentScraper
+namespace SharpContentScraper.Core
 {
     public class Scraper{
         public static IHtmlSelector Get(string url)
