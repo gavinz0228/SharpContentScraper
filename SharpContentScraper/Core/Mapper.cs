@@ -19,7 +19,6 @@ namespace SharpContentScraper.Core
                 Mappings[propertyName] =  new ValueMapping(){HtmlSelector = htmlSelector, AttributeName = attrName, Type = ValueType.Attribute};
             else
                 Mappings.Add(propertyName, new ValueMapping(){HtmlSelector = htmlSelector, AttributeName = attrName, Type = ValueType.Attribute});
-            Console.WriteLine( Mappings[propertyName].AttributeName);
             return this;
         }
         public Mapper MapText(string htmlSelector,string propertyName)

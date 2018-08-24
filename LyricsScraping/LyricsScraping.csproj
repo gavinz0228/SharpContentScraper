@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Reflection" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
     <ProjectReference Include="..\SharpContentScraper\SharpContentScraper.csproj" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.2" />

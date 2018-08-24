@@ -9,7 +9,8 @@ namespace LyricsScraping.BLL.LyricsScrapers
     {
         public static ILyricsScraper GetLyricsScraperByName(string className)
         {
-            return new SharpLyricsScraper();
+            Type targetType = Type.GetType(className);
+            return Activator.CreateInstance(targetType) as ILyricsScraper;
         }
     }
 }
