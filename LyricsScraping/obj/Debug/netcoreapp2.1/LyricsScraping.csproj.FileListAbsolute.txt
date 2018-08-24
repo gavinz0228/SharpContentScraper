@@ -1,0 +1,14 @@
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.csprojAssemblyReference.cache
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.csproj.CoreCompileInputs.cache
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.AssemblyInfoInputs.cache
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.AssemblyInfo.cs
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\LyricsScraping.deps.json
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\LyricsScraping.runtimeconfig.json
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\LyricsScraping.runtimeconfig.dev.json
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\LyricsScraping.dll
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\LyricsScraping.pdb
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\SharpContentScraper.dll
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\bin\Debug\netcoreapp2.1\SharpContentScraper.pdb
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.csproj.CopyComplete
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.dll
+C:\Users\Gzhang\Project\Scraper\LyricsScraping\obj\Debug\netcoreapp2.1\LyricsScraping.pdb

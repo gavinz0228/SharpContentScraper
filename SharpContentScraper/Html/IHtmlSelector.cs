@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System.Linq;
 using SharpContentScraper;
+using SharpContentScraper.Core;
 namespace SharpContentScraper.Html
 {
     public interface IHtmlSelector
