@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ScrapeProject.Migrations
+namespace LyricsScraping.Migrations
 {
     [DbContext(typeof(LyricsDbContext))]
     partial class LyricsDbContextModelSnapshot : ModelSnapshot
@@ -23,7 +23,7 @@ namespace ScrapeProject.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("Context");
+                    b.Property<string>("Content");
 
                     b.Property<DateTime>("CreationTime");
 

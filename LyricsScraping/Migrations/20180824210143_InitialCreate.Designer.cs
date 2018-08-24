@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ScrapeProject.Migrations
+namespace LyricsScraping.Migrations
 {
     [DbContext(typeof(LyricsDbContext))]
-    [Migration("20180824153558_InitialCreate")]
+    [Migration("20180824210143_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace ScrapeProject.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("Context");
+                    b.Property<string>("Content");
 
                     b.Property<DateTime>("CreationTime");
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft;
 using LyricsScraping.DAL.DatabaseEntities;
 using LyricsScraping.DAL.Repositories;
@@ -11,9 +12,12 @@ namespace LyricsScraping
         {
             var lyricsScraper = LyricsScraperFactory.GetLyricsScraperByName("LyricsScraping.BLL.LyricsScrapers.SharpLyricsScraper, LyricsScraping");
             var lyricsList = lyricsScraper.GetAllLyricsBySinger("Ed Sheeran");
-
+            var uniqueLyrics = lyricsList
+                .GroupBy(l => l.Title)
+                .Select(l => l.First())
+                .ToList();
             LyricsRepository lyricsRepository= new LyricsRepository(new LyricsDbContext());
-            lyricsRepository.Add(lyricsList);
+            lyricsRepository.Add(uniqueLyrics);
             Console.WriteLine("Success");
 
         }

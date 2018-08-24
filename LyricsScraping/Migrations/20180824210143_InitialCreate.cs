@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ScrapeProject.Migrations
+namespace LyricsScraping.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -25,7 +25,7 @@ namespace ScrapeProject.Migrations
                     Title = table.Column<string>(nullable: false),
                     Singer = table.Column<string>(nullable: true),
                     Author = table.Column<string>(nullable: true),
-                    Context = table.Column<string>(nullable: true),
+                    Content = table.Column<string>(nullable: true),
                     CreationTime = table.Column<DateTime>(nullable: false),
                     DownloadTime = table.Column<DateTime>(nullable: false),
                     SingerName = table.Column<string>(nullable: true)
