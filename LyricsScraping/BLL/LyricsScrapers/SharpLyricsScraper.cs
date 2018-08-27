@@ -17,11 +17,13 @@ namespace LyricsScraping.BLL.LyricsScrapers
         }
         public List<Lyrics> GetLyricsBySongTitle(string songTitle)
         {
-            return new List<Lyrics>();
+            var links = GetLinks("https://search.azlyrics.com/search.php?q=" + songTitle + "&w=songs&p=1");
+            return links.Select(l => GetLyrics(l)).ToList();
         }
         public List<Lyrics> GetLyricsBySingerAndSongTitle(string singer, string songTitle)
         {
-            return new List<Lyrics>();
+            var links = GetLinks("https://search.azlyrics.com/search.php?q=" + singer + " " + songTitle + "&w=songs&p=1");
+            return links.Select(l => GetLyrics(l)).ToList();
         }
         private List<string> GetLinks(string url)
         {
